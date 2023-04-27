@@ -1,7 +1,28 @@
 # MappingSand_CSDMS2023_epub
-An EPUB for the 2023 CSDMS meeting. Part of [The Doodleverse](https://github.com/Doodleverse)
+An EPUB for the 2023 CSDMS meeting. Part of [The Doodleverse](https://github.com/Doodleverse), an
+ecosystem of software, data, and trained models for geoscientific image segmentation.
+
 
 ## 🚀 Usage
+
+This notebook carries out the following tasks:
+
+* It downloads a time-series of high-resolution orthomosaic imagery tiles, using Google Earth
+Engine (GEE), from a Region-of-Interest (ROI) provided by a geojson format file.
+
+* It uses GDAL to create a seamless orthomosaic of the image tiles, then chops up that or-
+thomosaic again into tiles small enough for model application. We make the tiles with 50%
+overlap in each direction, so we are able to create pixelwise averages of model outputs.
+
+* It downloads a specified Zoo model for semantic segmentation of this imagery, from a public
+archive on Zenodo. The model architecture is provided via HuggingFace, and has been trained
+using the Segmentation Gym toolbox.
+
+* It then uses this model to identify sand pixels in tiled imagery.
+
+* It uses GDAL to orthomosaic image labels by mosaicing model outputs.
+
+* Finally, we carry out time-series analysis on outputs from multiple years using xarray.
 
 ### ✍️ Authors
 
@@ -9,6 +30,7 @@ An EPUB for the 2023 CSDMS meeting. Part of [The Doodleverse](https://github.com
 * [@2320sharon](https://github.com/2320sharon)
 * [@venuswku](https://github.com/venuswku)
 * [@ebgoldstein](https://github.com/ebgoldstein)
+* [@]
 
 ## ⬇️ Installation
 
@@ -56,3 +78,5 @@ Activate the conda env:
 
 
 ## 💭 Feedback and Contributing
+
+Please use github issues! Emails will not be responded to. Thanks!
