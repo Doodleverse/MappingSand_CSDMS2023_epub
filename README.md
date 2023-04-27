@@ -30,7 +30,7 @@ using the Segmentation Gym toolbox.
 * [@2320sharon](https://github.com/2320sharon)
 * [@venuswku](https://github.com/venuswku)
 * [@ebgoldstein](https://github.com/ebgoldstein)
-* [@]
+* [@CameronBodine](https://github.com/CameronBodine)
 
 ## ⬇️ Installation
 
