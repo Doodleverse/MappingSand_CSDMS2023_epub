@@ -24,6 +24,8 @@ using the Segmentation Gym toolbox.
 
 * Finally, we carry out time-series analysis on outputs from multiple years using xarray.
 
+Play with the model some more on this [demo](https://huggingface.co/spaces/dbuscombe/MappingSand)
+
 ### ✍️ Authors
 
 * [@dbuscombe-usgs](https://github.com/dbuscombe-usgs)
