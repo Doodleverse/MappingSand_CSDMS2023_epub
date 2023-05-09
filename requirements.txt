@@ -1,0 +1,12 @@
+geopandas
+xarray
+rioxarray
+dask
+pandas
+numpy
+matplotlib
+scikit-image
+tensorflow
+transformers
+doodleverse-utils
+geemap
