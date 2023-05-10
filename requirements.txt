@@ -10,4 +10,3 @@ tensorflow
 transformers
 doodleverse-utils
 geemap
-osgeo
