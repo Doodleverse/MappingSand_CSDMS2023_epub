@@ -79,6 +79,30 @@ Activate the conda env:
 `jupyter lab MappingSand_epub.ipynb`
 
 
+## Troubleshooting
+
+Conda is notoriously tricky when it comes to a complex set of dependencies such as here. Installing GDAL and Tensorflow alongside each other with their complex dependencies can easily break things, and it is a constant hassle to come up with conda recipes. You may have to tinker with conda to get it to work on your platform.
+
+### "Transformers library did not load"
+
+You probably have to install `torch` (see [here](https://stackoverflow.com/questions/70622895/transformers-model-from-hugging-face-throws-error-that-specific-classes-couldn-t) ). Try this:
+
+```
+pip uninstall transformers
+pip uninstall doodleverse-utils
+pip install torch torchvision 
+pip install transformers
+pip install doodleverse-utils
+```
+
+## Errors when running `from transformers import TFSegformerForSemanticSegmentation`
+
+```
+pip uninstall h5py
+conda install -c conda-forge h5py
+```
+
+
 ## 💭 Feedback and Contributing
 
 Please use github issues! Emails will not be responded to. Thanks!
