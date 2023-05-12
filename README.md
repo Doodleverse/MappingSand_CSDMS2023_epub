@@ -102,6 +102,27 @@ pip uninstall h5py
 conda install -c conda-forge h5py
 ```
 
+It may also sometimes be necessary to make a prefered kernel:
+
+```
+conda install -c conda-forge ipykernel
+python -m ipykernel install --user --name csdms
+```
+
+Then in jupyterlab, select the kernel named `csdms` to use
+
+
+## Google Eath Engine Credential errors
+
+Install `gcloud` by installing this: https://cloud.google.com/sdk/docs/install
+
+Then, restart, then install the GEE API and authenticate it (requires a Google login)
+
+```
+conda install -c conda-forge earthengine-api
+earthengine authenticate
+```
+
 
 ## 💭 Feedback and Contributing
 
